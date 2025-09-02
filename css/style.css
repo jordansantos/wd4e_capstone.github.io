@@ -126,6 +126,16 @@ section {
   border: 4px solid var(--accent-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 /* Seção Sobre Mim e Títulos */
 .about p {
   max-width: 800px;
