@@ -1,0 +1,459 @@
+/* Paleta de cores e fontes para o site */
+:root {
+  --primary-color: #0b0c10;
+  --secondary-color: #1f2833;
+  --text-color-light: #fcf8f3;
+  --text-color-dark: #c5c6c7;
+  --accent-color: #66fcf1;
+}
+
+/* --- Estilos Globais e do Corpo --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* Estilo para títulos principais */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color-light);
+  text-align: center;
+  margin-bottom: 1em;
+  padding-top: 1em;
+}
+
+/* --- Header e Navegação --- */
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--text-color-light);
+  margin-bottom: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  margin-left: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color-dark);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Oculta o botão de menu sanduíche no desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* --- Seções do Conteúdo Principal --- */
+main {
+  padding: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* Seção de Destaque */
+.empha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 80vh;
+}
+
+.text_opening {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.text_opening p {
+  color: var(--text-color-dark);
+}
+
+.text_opening p:first-child {
+  color: var(--text-color-light);
+}
+
+.text_opening p:nth-child(2) {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.text_opening p:last-child {
+  color: var(--text-color-light);
+}
+
+.photo_profile img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+}
+
+/* Seção Sobre Mim e Títulos */
+.about p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-color-dark);
+}
+
+/* Seção de Habilidades */
+.grid_skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.skill figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill figure:hover {
+  transform: translateY(-5px);
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+}
+
+.skill figure:hover img {
+  filter: none;
+}
+
+.skill figcaption {
+  margin-top: 0.5rem;
+  color: var(--text-color-dark);
+  font-weight: 500;
+}
+
+/* Seção de Projetos */
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.project article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h1 {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  text-align: left;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.project-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-info ul li {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.project-info div {
+  font-size: 0.9rem;
+  color: var(--text-color-dark);
+}
+
+/* Seção de Contato */
+.contact {
+  text-align: center;
+}
+
+.form_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.form_contact div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_contact label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-light);
+}
+
+.form_contact input[type="text"],
+.form_contact textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--text-color-dark);
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+.form_contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form_contact input[type="button"] {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form_contact input[type="button"]:hover {
+  background-color: #55e6da;
+}
+
+/* --- Rodapé --- */
+footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  color: var(--text-color-dark);
+}
+
+.social_media {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social_media svg path {
+  fill: var(--text-color-dark);
+  transition: fill 0.3s ease;
+}
+
+.social_media a:hover svg path {
+  fill: var(--accent-color);
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--text-color-dark);
+}
+
+.skip_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.skip_top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skip_top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333; /* Cor de fundo do botão */
+    color: #fff; /* Cor do ícone */
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsividade (Ajustes para telas menores) --- */
+@media (max-width: 768px) {
+  /* Mostra o botão do menu */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+  }
+
+  /* Estilo do ícone do menu sanduíche */
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    background: var(--text-color-dark);
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+  .hamburger::after {
+    transform: translateY(5px);
+  }
+
+  /* Animação para fechar o menu (X) */
+  .menu-toggle.is-active .hamburger {
+    transform: rotate(45deg);
+  }
+  .menu-toggle.is-active .hamburger::before {
+    opacity: 0;
+  }
+  .menu-toggle.is-active .hamburger::after {
+    transform: rotate(-90deg) translateX(8px);
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+    
+  /* Esconde o menu por padrão */
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Mostra o menu quando a classe .is-active é adicionada */
+  nav.is-active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .empha {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text_opening {
+    font-size: 2rem;
+  }
+    
+  .project article {
+    flex-direction: column;
+  }
+}
+
+/* --- Responsividade (Ajustes para telas maiores) --- */
+@media (min-width: 769px) {
+  .project article {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .project article:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .project article img {
+    width: 40%;
+    height: auto;
+  }
+
+  .project-info {
+    width: 60%;
+  }
+}
