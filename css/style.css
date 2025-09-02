@@ -31,7 +31,7 @@ a {
 }
 
 /* Estilo para títulos principais */
-h1 {
+h1, h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-color-light);
@@ -112,17 +112,10 @@ section {
   color: var(--text-color-dark);
 }
 
-.text_opening p:first-child {
-  color: var(--text-color-light);
-}
-
-.text_opening p:nth-child(2) {
+.text_opening p:last-child {
   font-weight: 700;
   color: var(--accent-color);
-}
-
-.text_opening p:last-child {
-  color: var(--text-color-light);
+  
 }
 
 .photo_profile img {
@@ -202,7 +195,7 @@ section {
   padding: 1.5rem;
 }
 
-.project-info h1 {
+.project-info h3 {
   font-size: 1.5rem;
   color: var(--text-color-light);
   text-align: left;
