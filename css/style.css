@@ -288,6 +288,17 @@ section {
   background-color: #55e6da;
 }
 
+.form_contact input.invalid,
+.form_contact textarea.invalid {
+  border: 2px solid red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.form_contact input.invalid::placeholder,
+.form_contact textarea.invalid::placeholder {
+  color: red;
+}
+
 /* --- Rodapé --- */
 footer {
   background-color: var(--secondary-color);
